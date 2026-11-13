@@ -1,0 +1,14 @@
+# Contracts for this app. Put sources in src/, tests in test/.
+# OpenZeppelin comes from npm (node_modules); install forge-std once with: npm run contracts:setup
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+allow_paths = ["../node_modules"]
+optimizer = true
+optimizer_runs = 200
+remappings = [
+  "forge-std/=lib/forge-std/src/",
+  "@openzeppelin/contracts/=../node_modules/@openzeppelin/contracts/",
+]

@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@tanstack/react-query": "5.104.3",
+    "viem": "2.57.7",
+    "wagmi": "2.19.5"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "5.7.0"
+  },
+  "miniappDependencies": {
+    "@farcaster/miniapp-wagmi-connector": "2.0.0"
+  },
+  "scripts": {
+    "chain": "anvil --port 8545",
+    "contracts:setup": "cd contracts && forge install foundry-rs/forge-std@v1.17.0 --no-git",
+    "contracts:build": "forge build --root contracts",
+    "contracts:test": "forge test --root contracts",
+    "contracts:deploy": "node scripts/deploy-contract.mjs",
+    "test:local": "node scripts/test-local.mjs"
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "version": "0.3.0",
+  "snapshot_date": "2026-11-03",
+  "method": "Curated and rewritten provider-independent procedures and patterns; no bulk export or runtime dependency on source repositories.",
+  "source_revisions": {
+    "vb": "481fe26bd277cff0865a15a4db680cdc1864ffd7",
+    "create-eth/externalExtensions/ve": "04dcf81100bca68477b2350dd81bf0b0dfe241e3",
+    "workspace": "75e5d602672b5ba511b62e98209b8384b1c305a2"
+  },
+  "inputs": [
+    {
+      "path": "vb/resources/viniapp/AGENTS.md",
+      "sha256": "5b0e30a430bcfa520889138e987fa68528c88357c3bd694f73e630157b21960a"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/full-build-workflow/SKILL.md",
+      "sha256": "c60d75f2213359e4fc53c0e0f52cfb2061d61dc2dc4d26c944d567c92d274664"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-design-system/SKILL.md",
+      "sha256": "39f98bd1ec268c98b98f24359915fb0bbe7f7e0f6c2051525728275f06ff523d"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/embedded-container-layout/SKILL.md",
+      "sha256": "26b623d4ba159f548efd392d0967409296e06c537da0c6c91765def825461f77"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/feature-exercise-checklist/SKILL.md",
+      "sha256": "38afc441c13201d73739b5dddd9a813f380f2edbc4ff90b0b2e8e3dc05593c8a"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-technical-patterns/SKILL.md",
+      "sha256": "c8e8d63cc7e89bc9cca3f0d4179374b7e879358998e08479ffb26f8d035d360d"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-launch-flow/SKILL.md",
+      "sha256": "03143d31af7cca1ed72b8cc2b7f5f05d2ae4ff24bd6f4a1507b81fbb1020ff9f"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-smart-contracts/SKILL.md",
+      "sha256": "1932389fca91b3c88c3bf64a69ae84ece7ee0268edbecd325d449362e2e5074a"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/SKILL.md",
+      "sha256": "fdf5fc872c0c5c5ef3258e6a1026d45ec3ff2d59b4a3cde990fae230143c659c"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/platform-score-integrity/SKILL.md",
+      "sha256": "09ef65594bb354ea44e3ef26e66465c827bf195a131f44475411b2c3806985f5"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/external-service-fail-closed/SKILL.md",
+      "sha256": "b9127463c6e2e61e02646d66f38cade72d78711b2f44810a73d069965e39c046"
+    },
+    {
+      "path": "create-eth/externalExtensions/ve/extension/packages/nextjs/components/MiniappProvider.tsx",
+      "sha256": "ae1e34b8a2e0cf4a8acb62e76cddbcb621df7458cf5b0d429a4df5787a26a6bf"
+    },
+    {
+      "path": "create-eth/externalExtensions/ve/extension/packages/nextjs/scaffold.config.ts.args.mjs",
+      "sha256": "cdece41bd05fc91887d737606f0d28ae7c822b55d8c4330720ff677329919e03"
+    },
+    {
+      "path": "docs/BUILD_PROCESS.md",
+      "sha256": "984604d45c180f140b32faf06238865def45cc55cfe9c81f89785d8b29f7771b"
+    },
+    {
+      "path": "vb/app/Services/BuilderPlatformInvariantService.php",
+      "sha256": "83b4df60c845b1b747ed11f10950c612778fd1d4c15f8e5e82dee246ebc1dc74"
+    },
+    {
+      "path": "vb/resources/viniapp/harness/browser-smoke.cjs",
+      "sha256": "af29f3b63a0d6e652dc66db1fbe3d72e91cdb3b096cbff054275e3bd000a56f1"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/farcaster-user-search/SKILL.md",
+      "sha256": "98a667f585e599d2d0517b163af64302d999446724899834a591b280bdd3d5d6"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/farcaster-user-search/rules/api-route.md",
+      "sha256": "71b5191765960b18f9f96b9c2c153de7b9145cdcb23f57957919d385d791e642"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/farcaster-user-search/rules/components.md",
+      "sha256": "bea7f4c8c7bf4e0cb868e07d602823e736452e9ac95f169ba3b11c53cea26747"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/farcaster-user-search/rules/types-and-api-fields.md",
+      "sha256": "f3871446cce7fdb9bbcd144c394afb6ef439fcb167a184b57ee5a25b5b770188"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/farcaster-miniapp-features/SKILL.md",
+      "sha256": "15bce9f5db28f1f99fc6b4633ee1a568f1e92a9eaa195a012b592031c3e2809a"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-launch-flow/rules/manifest-urls.md",
+      "sha256": "0c6f180fc5bf055b2239347432b3054ee0687d088b2612671d089dd28ed82013"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/dynamic-og-share-images/SKILL.md",
+      "sha256": "a0121b405aa618399196c385ae821d50c0b8a45dc6d9240a854627a38c34e592"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/dynamic-og-share-images/rules/implementation.md",
+      "sha256": "6a720ab6471da5be581e170856b0589eff1da06e81a69e3961137f4f5cd7070d"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/next-og-image-routes/SKILL.md",
+      "sha256": "5973015f3520c080d0bc151a752daf82d8f97f3072f67475885470fa46137fb5"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/next-og-image-routes/cache-headers.md",
+      "sha256": "9921268ed72ac31763aa4e70983630016e353a6d6a9d6dd518e8856f8e144a95"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/next-og-image-routes/dynamic-og-patterns.md",
+      "sha256": "d64ca0ff1e2acd1ab090854ccb661e2d7cb1794fb353c46c96e4148507890764"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/profile-share-pages/SKILL.md",
+      "sha256": "2b6fd3cd0af62eb778f919caf4853c35f63918da95ee2dea4042fd28d0943384"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/profile-share-pages/rules/01-getmetadata-deep-linking.md",
+      "sha256": "a409302fb25094f7c6ff86540078d8bd204e9a1744e5cab859ce60f96ef5a234"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/profile-share-pages/rules/02-og-image-generation.md",
+      "sha256": "a2b5b5434e6f19ca02cedefa662e3e890176602537e3716e54181d24578f2e9c"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/profile-share-pages/rules/03-page-implementation.md",
+      "sha256": "a7e7f49723b4cd0f7d748f6d984c8de6f46b918e0f120adc875960d25bb74375"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/platform-sharing/SKILL.md",
+      "sha256": "f18c6330a587f7c7279f2ae568d2272664a5727e3e5d53c3146d4618c9b9823a"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/celo-minipay/SKILL.md",
+      "sha256": "6130c8a83892180dff2914b357bbe403ce33b18d66afe6805f78658cd3850c0d"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/celo-minipay/rules/token-preference-detection.md",
+      "sha256": "484ff568fb4b31335918eaa690c168e6fa6850017582df9026cd08d7722466f5"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/worldcoin-minikit/SKILL.md",
+      "sha256": "385136d87dbbc5301a5f98de1b07de5714fb56341ed9464c0bd9de9c0480d608"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/worldcoin-minikit/rules/v2-api-patterns.md",
+      "sha256": "5e746f5d3b3f5276da4968f9abe6c9fe95a603eb89c48be9f445ed92a951de31"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/worldcoin-minikit/rules/world-app-autoconnect.md",
+      "sha256": "94e70ce565fb2f749ed77375272ea930a4083c1a4e5968faaeabb56a52c85885"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-notifications/SKILL.md",
+      "sha256": "954e690d6b8c4b47d26ff261d5eeba259569211ef428921835e138b5d3bdb0be"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-notifications/references/chessmate-example.md",
+      "sha256": "d4db8f93ebb92118ea88abbf4564f93bfa000a1acecf3072f259403c1a7b7f43"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-notifications/rules/broadcast-to-all-subscribers.md",
+      "sha256": "99a1c2a5206c731893cced119e3838af1b39665c2bfeda8c25ba05abce0b9888"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-notifications/rules/client-logging.md",
+      "sha256": "bbc59f1f34e7c84e19886c2ec7e53246535d36651211f31022882682a125ac87"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-notifications/rules/cooldown.md",
+      "sha256": "4ebb4969346252b40d6f4663e80ebfefa1c62c070e3a1a6e36e40cccdfe4a8fb"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-notifications/rules/cron-audit-pattern.md",
+      "sha256": "47aabae7d40156b514751fc7ad1140f8243c12f9c0e2183590690c1b7ce3a698"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-notifications/rules/manual-setup.md",
+      "sha256": "8f0b67cb04867d4627375c453eb13b02102092fa2ea975bc07bfe515501699a1"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-notifications/rules/multi-table-financial-writes.md",
+      "sha256": "5e567267c25144f023eb726c49131eefdf224a62b590474cf120d41d7971f00f"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-notifications/rules/user-preferences.md",
+      "sha256": "df46b3814bc37a5c7abbd901387225cc48cb7f67f6e090a28216435f2b0e929a"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-notifications/rules/webhook-forwarding.md",
+      "sha256": "40a6a295882154a18b07d5790dd16343b9ba8faa0bcc0c897f18ad871707daff"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/SKILL.md",
+      "sha256": "16858b60655d480d818334f0e3021cdf1d821bd2d6066c4bc972849ff0d968c7"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/rules/api-routes-and-queries.md",
+      "sha256": "40d072449a821bbc09882b1917e4a5d450145dff40b8e7f40b907471c7cfcfee"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/rules/atomic-sql-patterns.md",
+      "sha256": "b19dcc1d411d7c9e3f3fd084b4f29592b9ed214cf939928ab748caada89f69ca"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/rules/calendar-event-queries.md",
+      "sha256": "7c6c8ba57717184ddc32ae22b7b47211730dba41d0e5fcdd269b468fb0442ebd"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/rules/error-handling.md",
+      "sha256": "3c68bcc607dca543700bf792d09c1e7ce960ad5e121645262a786cdf6f8bf067"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/rules/key-rules-full.md",
+      "sha256": "7ba7348815a34dfc2672ee18f94f4fc55f696fa77bffc21196b5e76864210767"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/rules/neon-realtime.md",
+      "sha256": "674da039d4d48519153cdcd77dff500ca4e607ef02d44eba0d908e197bfb36a8"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/rules/primary-key-allocation.md",
+      "sha256": "2f095b97fd7eda614808b89e3cfe91e26dd6ea8596e4e117dede1ce530873ae2"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/rules/schema-patterns.md",
+      "sha256": "3f88a3e70e13e3e059bb64a874fb4703627ff3e6aadbee3674107ba2ebd7257e"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/rules/security-and-identity.md",
+      "sha256": "265a53bed6114422ed8baa1677383bb68c5b18af234740e2c800770481459eba"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/neon-db/rules/setup-and-provisioning.md",
+      "sha256": "c86e797899c2c525d4668316dedd3a99e1629c9ca51a749d19dd66261b45308c"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/SKILL.md",
+      "sha256": "2bae65d03c0494eff8fb48829563b9a8a21029f3208d8a842d535f7c98945175"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/references/useX402Fetch.ts",
+      "sha256": "4e150af24204be69840328965aa0bf06762886bc67e62e80e120f96af993e395"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/references/x402-config.ts",
+      "sha256": "7b59eabddff5af7a4b2e159773d963eda053a30e3de615c04e9a7c478afa1db2"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/rules/api-spec-endpoints.md",
+      "sha256": "2b60ae4c60f271a352d9c035a3908523fbb48c01ffc6c45528c3053670bde363"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/rules/client-side-payment.md",
+      "sha256": "ac88b6f9bfd19fa99619e7f0318656ce01e1d7b61d66cc6dcc39ec483bc2536b"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/rules/endpoint-spec-format.md",
+      "sha256": "5cbbf9832e8a03ea2739d02512b8dd1505bc3c2698d10b00744cef2bbf0da6fd"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/rules/integration-examples.md",
+      "sha256": "7cef348aea38647e6c3f394cbc3c5e0f85fb7097f413e66084831ba2f843bced"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/rules/pagination.md",
+      "sha256": "225a7e1033319bc80ebc69091fe4fdcfa28a5579a71d4eb85ecfe1ae5177ba44"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/rules/semantic-search.md",
+      "sha256": "06d1485317f24ea4f49e75662da463c41d512269ae513f374056780c73677fc7"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/rules/server-side-payment.md",
+      "sha256": "3048a5eb953362acb59ec130777bdd3201666be312a29dc33282505cdcd49ca4"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/x402-best-practices/rules/x402-reference.md",
+      "sha256": "ee40c480dfa5b73966108e5205d6501ffc4571a86202a18d1499ffccaac19385"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/complete-game-example.md",
+      "sha256": "4e2871cc4ab4dd8bddecd9ad9004ce9e5860b6550f6f62738d2e163a11e0f98a"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/game-spec-template.md",
+      "sha256": "fdf1206348521c5af89426195bd2841d4871a49e6c1964728ee292d62f7be185"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/gameplay-feel-strip.md",
+      "sha256": "a5d1275090e9c7183e71a9ea7c8fceeb8663a1f768b988c65ddc1e6ac12db7df"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/admin-test-play.md",
+      "sha256": "9c2583dd9694973a7bf6412a6c1e7180121740adfce1b0dce038799c6a4008c3"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/canvas-games.md",
+      "sha256": "7e11cc737ab6f85e94caa18c260eff3cc8f3da1665f8ee56be08846596b41a4e"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/card-games.md",
+      "sha256": "046e9f7e5e8f3c0cfc952a9a8fbdf8e56c4202a48ef53ba438e0171a0e1c5e66"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/celebrations.md",
+      "sha256": "c752418a4584758ac66ea2d6a8b91fae7a2f423ac307a55e3dabfcec0a5a1968"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/continue-mechanics.md",
+      "sha256": "89524e892c03158e3b3cb05b54a07882dae92493bd56e7bc0d0a749ede973c5c"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/crash-betting.md",
+      "sha256": "3f3c5b7c02879675b086e084bdbaf55a5fe1d486d4ec10861706f7e4455996cf"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/css-games.md",
+      "sha256": "be0267f4dd6f8b95c2499a2b809995fc1775cb98188b080f84f51ad6159dd46a"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/driving-games.md",
+      "sha256": "95e3a7fdd0f0988cc40b9cbb654d2faa16ec1af3c5e36493f0a47e26b29d2cca"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/game-feel.md",
+      "sha256": "ee0bc8cffe72b9600027fb6908bb53480f54537adf63e8ed296d0f7e46e8a5de"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/game-mechanics.md",
+      "sha256": "d1aadb7536269411ae91e52f4dbeaeb58c49f2ba312af582c66d7a723516b6c3"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/game-state-machines.md",
+      "sha256": "12f08e33697f6b8e5785087ce83e262a45b30f31be04ab2176792933a9af7e09"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/higher-lower.md",
+      "sha256": "76877f9413f8830aeb3424194927958b84144c78c29c33698103d080239d14b9"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/idle-accrual.md",
+      "sha256": "33f44af4aa333b057c1964fe9b690dc93492e3914ec6dd7367f1fb5ac50bf4d3"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/level-design.md",
+      "sha256": "2a8bd378923618bb156469a4ce5b414b53269ba98543c5a31f800761d4924652"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/match3-puzzle.md",
+      "sha256": "4b05e3f083c9b7ff8f4014d06d5926cc2deb1372af0a2e668b867aac8071b6ad"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/multi-mode-games.md",
+      "sha256": "55573ed2e6f57f326980861cbcc42555ef45f593c5a2fd6a77a2b581b960d301"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/multiplayer-turns.md",
+      "sha256": "62ee61e5c6f81d8368c80439bf53cae15b9dada13b4c62ce107b9f244e344725"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/physics-engines.md",
+      "sha256": "ac6aac1a687201a189ddb09b059e32933ef739f1329b83fb643decf26da28ea9"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/pixijs-2d.md",
+      "sha256": "c8c3a3d38625d49c8bf924b277446b2666eea57cb6b4d6c9ff365ec510fc7082"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/race-betting.md",
+      "sha256": "a7836945adbf2c777b25585051040455649b157e698a2bb245305f8b4883f56f"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/swipe-games.md",
+      "sha256": "319bd6b562c1c7f2b27485d90c66cf954929883fde31cfecd59e586678fe0a0e"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/threejs-3d.md",
+      "sha256": "775c88c2c687852707e32790a164b1e1317798a61ff46b9287b2976bd51cf10f"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/token-game-integration.md",
+      "sha256": "fd42a9bd17abdadd87cfb8136b7842f19e24237892902a568828ca6c688759d1"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/touch-reveal.md",
+      "sha256": "5fad90f9a96c9c135fb1dffa6619d6e8a44680b490bf2a69ad9e4efb9f30bc8e"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/tournament-patterns.md",
+      "sha256": "0eb3a7e111823e834e02f67b9fa1ea0325d164d1ea8e894c177717bfabae9211"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/turn-based-combat.md",
+      "sha256": "742608e5d2cb7d65fd1b4568cbe07a63859205fab506bbb8f9c0aa91ffbc93b8"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/web-audio.md",
+      "sha256": "a67ddb77dca2ecab3eacac7085a0a9a6cb60436f9da7b77889018634f7388a57"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/references/genres/when-to-use-what.md",
+      "sha256": "7cb70adb7fe59697e0525fd094fba3f1908eaa5591b1474b3503f6993a03a4d9"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/rules/genre-index.md",
+      "sha256": "32d4942deafeab5ef3df37ab2605decfd97538c536ea66ac18b212247f34a96a"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/miniapp-game-patterns/rules/implementation-rules.md",
+      "sha256": "88bd6a6fabddccbf7dd3375d44a2c9f0f334b667e4cb83cda309cd4433a645e7"
+    },
+    {
+      "path": "vb/resources/viniapp/skills/webview-canvas-game/SKILL.md",
+      "sha256": "71e4680761505d0b542dce6319906afa3282ed50522085ab59bed46a054dfe43"
+    }
+  ],
+  "layout_reference": {
+    "url": "https://github.com/austintgriffith/ethskills",
+    "used": "Catalog plus selectively loaded topic/SKILL.md layout. Ethereum/EVM guidance is linked upstream, not copied or maintained here."
+  },
+  "new_material": [
+    "Local build/repair/resume procedures",
+    "Minimal independent web starter",
+    "Optional Farcaster provider example",
+    "Local tool validation, tests and deterministic archive packaging",
+    "Topic references rewritten from 14 platform skills (miniapp hosts, sharing, search, notifications, Postgres, x402, game loop and webview canvas)",
+    "Optional Farcaster miniapp starter overlay (create.mjs --miniapp) with pinned SDK lockfile"
+  ],
+  "excluded": [
+    "Managed app controller and agent API",
+    "Platform keys, hub endpoints, analytics and notifications",
+    "Managed hosting and database provisioning",
+    "Billing, fees, transaction attribution and forced product branding",
+    "Customer app source and build transcripts",
+    "Investor materials and credentials"
+  ],
+  "update_policy": "Explicit reviewed snapshots for this pack. ETHSkills stays upstream and is read on demand, never automatically executed.",
+  "external_knowledge": [
+    {
+      "name": "ETHSkills",
+      "entry_point": "https://ethskills.com/SKILL.md",
+      "scope": "Ethereum/EVM development, wallets, contracts, onchain security and verification",
+      "policy": "Read relevant upstream topics on demand; do not vendor or duplicate their instructions."
+    }
+  ]
+}

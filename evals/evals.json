@@ -1,0 +1,23 @@
+{
+  "skill_name": "viniapp-skills",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a mobile-friendly personal reading list with add, mark read, delete and reload persistence. No accounts, wallets, paid services or deployment. Store it on this device and say so.",
+      "expected_output": "A working app with bounded inputs, browser persistence, a visible device-local explanation, and browser tests driving add, mark, reload and delete. No platform dependencies.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Build a shared leaderboard for a Farcaster game, with cross-device scores, verified identity and no managed database provider. No database connection, signer or public domain is supplied yet.",
+      "expected_output": "Separates verified identity, real server persistence, gameplay and publishing requirements; finishes independent implementation where feasible and accurately reports unavailable integration checks. No local-only substitute for a shared leaderboard, fake signature or invented credentials.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Fix an ERC-20 purchase that submits immediately after approval and sometimes fails. Preserve the existing wallet framework, wait for approval receipt, explicitly read allowance, guard duplicate taps, and verify rejection and wrong-chain paths.",
+      "expected_output": "A bounded repair in the existing shared write flow, confirmed approval followed by allowance refetch/read, receipt-aware success and meaningful tests. No global fast polling or platform attribution.",
+      "files": []
+    }
+  ]
+}

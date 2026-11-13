@@ -1,0 +1,4 @@
+interface:
+  display_name: "ViniApp Skills"
+  short_description: "Build and verify independent apps and miniapps"
+  default_prompt: "Use $viniapp-skills to build and verify my app in its own repository."

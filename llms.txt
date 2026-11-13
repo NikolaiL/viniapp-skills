@@ -1,0 +1,18 @@
+# ViniApp Skills
+
+Portable app-building knowledge and agent-executed build procedures.
+Resolve these relative links against the fetched location of this file.
+
+- [Entry point](SKILL.md): routing, scope, and included tools
+- [Ship](ship/SKILL.md): idea to a complete testable app
+- [Procedures](procedures/SKILL.md): local controller, repair, resume, handoff
+- [Design](design/SKILL.md): product identity and interaction states
+- [Mobile](mobile/SKILL.md): safe areas, responsive layout, touch
+- [Data](data/SKILL.md): real persistence, auth, migrations, APIs
+- [Miniapps](miniapps/SKILL.md): requested embedded-host integrations
+- [ETHSkills routing](wallets/SKILL.md): link to upstream Ethereum/EVM guidance
+- [Games](games/SKILL.md): simulation, input, feedback, score integrity
+- [Media](media/SKILL.md): generated art, game graphics, music loops, sound effects
+- [Security](security/SKILL.md): secrets, trust boundaries, funds
+- [QA](qa/SKILL.md): observable acceptance and evidence
+- [Installation](README.md): installing and using the full pack
