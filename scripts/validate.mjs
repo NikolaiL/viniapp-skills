@@ -8,6 +8,8 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 const files = [];
 function walk(directory) {
   for (const name of readdirSync(directory)) {
+    // The website (site/, its dist/ output, vercel.json) is not part of the pack.
+    if ([".git", ".vercel", "site", "dist", "vercel.json"].includes(name) && directory === root) continue;
     if (name === ".git") continue;
     const file = path.join(directory, name);
     const stat = lstatSync(file);

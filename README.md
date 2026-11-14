@@ -5,6 +5,15 @@ An open-source snapshot of [ViniApp](https://www.viniapp.xyz)'s development
 knowledge, with local procedures replacing the managed build controller.
 Version **0.3.0**.
 
+## Use it in one line
+
+Paste this into any coding agent that can edit files and run commands:
+
+> Read https://skills.viniapp.xyz/SKILL.md and follow it to build my app: [describe your app]
+
+The agent reads the topics it needs by URL and downloads the pack for the starter
+and scripts. More at [skills.viniapp.xyz](https://skills.viniapp.xyz).
+
 Prefer not to run an agent yourself? [ViniApp](https://www.viniapp.xyz) builds,
 deploys and hosts Farcaster and Base mini apps from a prompt. This pack is the
 do-it-yourself version of that knowledge.

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ViniApp Skills</title>
+<meta name="description" content="Give your coding agent one line and it builds a complete, tested web app or Farcaster mini app. Open skills from ViniApp.">
+<meta property="og:title" content="ViniApp Skills">
+<meta property="og:description" content="One line for your coding agent: build a complete, tested web app or mini app.">
+<meta property="og:url" content="https://skills.viniapp.xyz">
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --mist: #f1f5f9;
+  --paper: #ffffff;
+  --go: #10b981;
+  --go-ink: #047857;
+  --idea: #7c3aed;
+  --idea-wash: #f3efff;
+  --sun: #f59e0b;
+  --sans: "Instrument Sans", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e2e8f0;
+    --muted: #94a3b8;
+    --line: #1e293b;
+    --mist: #111a2e;
+    --paper: #0a1020;
+    --go-ink: #34d399;
+    --idea: #c4b5fd;
+    --idea-wash: #1f1640;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.0625rem/1.6 var(--sans);
+}
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--go-ink); }
+:focus-visible { outline: 3px solid var(--go); outline-offset: 3px; border-radius: 4px; }
+code, kbd { font-family: var(--mono); font-size: .88em; }
+.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
+
+header.top { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; }
+.brand { display: flex; align-items: center; gap: .6rem; font-weight: 600; text-decoration: none; }
+.brand img { width: 28px; height: 28px; border-radius: 7px; }
+.top nav { display: flex; gap: 1.25rem; font-size: .95rem; color: var(--muted); }
+.top nav a { text-decoration: none; }
+
+.hero { padding: 3.5rem 0 1rem; }
+h1 { font-size: clamp(2.1rem, 6vw, 3.4rem); line-height: 1.05; letter-spacing: -.025em; font-weight: 700; margin: 0 0 1rem; max-width: 14ch; }
+.lede { font-size: 1.2rem; color: var(--muted); margin: 0 0 2.25rem; max-width: 36rem; }
+
+/* The prompt: what you paste into your agent, with your idea in the blank. */
+.prompt {
+  font: 500 clamp(1.05rem, 2.6vw, 1.35rem)/1.6 var(--mono);
+  background: var(--mist);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.prompt .fixed { color: var(--ink); }
+.prompt .url { color: var(--go-ink); }
+.idea {
+  display: inline;
+  font: inherit;
+  color: var(--idea);
+  background: var(--idea-wash);
+  border-radius: 6px;
+  padding: .05em .3em;
+  outline: none;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  min-width: 2ch;
+}
+.idea:empty::before { content: attr(data-placeholder); opacity: .6; }
+.idea:focus { box-shadow: 0 0 0 2px var(--idea); }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; margin-top: 1.1rem; }
+button.copy {
+  font: 600 1rem var(--sans);
+  background: var(--go);
+  color: #052e1f;
+  border: 0;
+  border-radius: 10px;
+  padding: .8rem 1.3rem;
+  cursor: pointer;
+  min-height: 48px;
+}
+button.copy:hover { background: #0ea371; }
+.copied { color: var(--go-ink); font-weight: 600; font-size: .95rem; }
+.examples { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.examples button {
+  font: 500 .9rem var(--sans);
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .4rem .85rem;
+  cursor: pointer;
+  min-height: 36px;
+}
+.examples button:hover { border-color: var(--idea); color: var(--idea); }
+.examples-label { font-size: .95rem; color: var(--muted); margin: 1.25rem 0 0; }
+.works { color: var(--muted); font-size: .95rem; margin: 1.5rem 0 0; }
+
+section { padding: 3rem 0 0; }
+h2 { font-size: 1.5rem; letter-spacing: -.015em; margin: 0 0 .75rem; }
+section > p { color: var(--muted); margin: 0 0 1rem; max-width: 38rem; }
+
+ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 1.25rem 0 0; }
+ol.steps li { counter-increment: step; display: grid; grid-template-columns: 2.25rem 1fr; gap: .25rem; padding: .7rem 0; border-top: 1px solid var(--line); }
+ol.steps li::before { content: counter(step); font: 600 1rem var(--mono); color: var(--go-ink); }
+ol.steps strong { display: block; }
+ol.steps span { color: var(--muted); }
+
+dl.topics { display: grid; grid-template-columns: minmax(7rem, 9rem) 1fr; gap: .55rem 1.25rem; margin: 1.25rem 0 0; }
+dl.topics dt a { font-weight: 600; }
+dl.topics dd { margin: 0; color: var(--muted); }
+
+pre {
+  font: 400 .92rem/1.6 var(--mono);
+  background: var(--mist);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  margin: .5rem 0 1rem;
+}
+.downloads { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 0 0 1rem; }
+.downloads a { font-weight: 600; }
+
+.hosted { margin-top: 3rem; padding: 1.5rem; border-radius: 14px; background: var(--idea-wash); }
+.hosted h2 { margin-bottom: .4rem; }
+.hosted p { margin: 0; color: var(--ink); }
+
+footer { margin: 4rem 0 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; font-size: .92rem; color: var(--muted); }
+
+@media (max-width: 560px) {
+  .top nav a.hide-sm { display: none; }
+  .hero { padding-top: 2rem; }
+  .prompt { padding: 1.1rem; border-radius: 12px; }
+  dl.topics { grid-template-columns: 1fr; gap: .1rem; }
+  dl.topics dd { margin-bottom: .6rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .copied { transition: opacity .2s; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/"><img src="/favicon.png" alt="" width="28" height="28">ViniApp Skills</a>
+    <nav aria-label="Links">
+      <a href="#how">How it works</a>
+      <a class="hide-sm" href="#topics">Topics</a>
+      <a href="https://github.com/NikolaiL/viniapp-skills">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Build apps with your own coding agent.</h1>
+      <p class="lede">Paste one line into Claude Code, Codex, Cursor or any agent that can edit files and run commands. It plans, builds, tests and hands over a complete web app or Farcaster mini app.</p>
+
+      <p class="prompt" id="prompt"><span class="fixed">Read </span><span class="url">https://skills.viniapp.xyz/SKILL.md</span><span class="fixed"> and follow it to build my app: </span><span class="idea" id="idea" contenteditable="plaintext-only" role="textbox" aria-label="Describe your app" spellcheck="true" data-placeholder="describe your app here"></span></p>
+
+      <div class="actions">
+        <button class="copy" id="copy" type="button">Copy prompt</button>
+        <span class="copied" id="copied" role="status" aria-live="polite"></span>
+      </div>
+
+      <p class="examples-label">Or start from an idea:</p>
+      <ul class="examples">
+        <li><button type="button">a brick-breaker game with a daily leaderboard</button></li>
+        <li><button type="button">split a bill with friends in USDC on Base</button></li>
+        <li><button type="button">a habit tracker that sends daily reminders</button></li>
+        <li><button type="button">a quiz about my Farcaster channel</button></li>
+      </ul>
+
+      <p class="works">No account, API key or ViniApp service needed. Everything runs in your project.</p>
+    </div>
+
+    <section id="how">
+      <h2>What your agent does</h2>
+      <p>The skills are a procedure, not a template. Your agent follows it from the brief to a verified handover.</p>
+      <ol class="steps">
+        <li><div><strong>Turns your idea into checks</strong><span>Writes what has to work, so "done" means something you can see.</span></div></li>
+        <li><div><strong>Picks only what the app needs</strong><span>A database, wallet, mini app host or game loop, only when the idea calls for it.</span></div></li>
+        <li><div><strong>Builds it in working slices</strong><span>On a pinned Next.js starter, mobile first, with real data and real states.</span></div></li>
+        <li><div><strong>Tests it like a person would</strong><span>Production build plus browser tests on phone and desktop, repairing what fails.</span></div></li>
+        <li><div><strong>Hands over the evidence</strong><span>Source, exact commands, test results, and anything still waiting on you.</span></div></li>
+      </ol>
+    </section>
+
+    <section id="topics">
+      <h2>What it knows</h2>
+      <p>Your agent reads only the topics a task needs. Each is a plain Markdown file you can read too.</p>
+      <dl class="topics">
+        <dt><a href="/ship/SKILL.md">Ship</a></dt><dd>From idea to a complete, testable app.</dd>
+        <dt><a href="/procedures/SKILL.md">Procedures</a></dt><dd>Plan, build, verify, repair, resume and hand off.</dd>
+        <dt><a href="/design/SKILL.md">Design</a></dt><dd>Visual identity, navigation and interaction states.</dd>
+        <dt><a href="/mobile/SKILL.md">Mobile</a></dt><dd>Safe areas, responsive layouts and touch controls.</dd>
+        <dt><a href="/data/SKILL.md">Data</a></dt><dd>Real persistence, sign-in, migrations and APIs.</dd>
+        <dt><a href="/miniapps/SKILL.md">Mini apps</a></dt><dd>Farcaster and other embedded hosts, when you ask for them.</dd>
+        <dt><a href="/games/SKILL.md">Games</a></dt><dd>Game loops, input, feel and score integrity.</dd>
+        <dt><a href="/media/SKILL.md">Media</a></dt><dd>Generated art, sprites, music loops and sound effects.</dd>
+        <dt><a href="/wallets/SKILL.md">Ethereum</a></dt><dd>Wallets and contracts, routed to <a href="https://ethskills.com">ETHSkills</a>.</dd>
+        <dt><a href="/security/SKILL.md">Security</a></dt><dd>Secrets, trust boundaries and funds.</dd>
+        <dt><a href="/qa/SKILL.md">QA</a></dt><dd>Acceptance checks, browser evidence and final review.</dd>
+      </dl>
+    </section>
+
+    <section id="install">
+      <h2>Install it locally</h2>
+      <p>Your agent downloads the pack by itself when it needs the starter and scripts. To keep a copy, or to install it as a skill:</p>
+      <div class="downloads">
+        <a href="/download/viniapp-skills.zip" download>viniapp-skills.zip</a>
+        <a href="/download/viniapp-skills.skill" download>viniapp-skills.skill</a>
+        <a href="/download/SHA256SUMS">SHA256SUMS</a>
+      </div>
+      <pre><code># Codex: install, then use $viniapp-skills
+unzip viniapp-skills.zip -d ~/.codex/skills/
+
+# Or start a project yourself
+node viniapp-skills/scripts/create.mjs ./my-app</code></pre>
+      <p>Needs Node.js 22.11 or newer. Browser tests use Playwright.</p>
+    </section>
+
+    <div class="hosted">
+      <h2>Rather not run an agent?</h2>
+      <p><a href="https://www.viniapp.xyz">ViniApp</a> builds, deploys and hosts Farcaster and Base mini apps from a prompt, with a database, notifications and a token if you want one. These skills are the do-it-yourself version of that knowledge.</p>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://www.viniapp.xyz">ViniApp</a>
+    <a href="https://github.com/NikolaiL/viniapp-skills">Source on GitHub</a>
+    <a href="/llms.txt">llms.txt</a>
+    <span>Ethereum knowledge by <a href="https://ethskills.com">ETHSkills</a></span>
+    <span>MIT licence</span>
+  </footer>
+</div>
+
+<script>
+const idea = document.getElementById('idea');
+const prompt = document.getElementById('prompt');
+const status = document.getElementById('copied');
+
+function promptText() {
+  const text = prompt.innerText.replace(/\s+/g, ' ').trim();
+  return idea.textContent.trim() ? text : text + ' [describe your app]';
+}
+
+document.getElementById('copy').addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(promptText());
+    status.textContent = 'Copied. Paste it into your agent.';
+  } catch {
+    const range = document.createRange();
+    range.selectNodeContents(prompt);
+    getSelection().removeAllRanges();
+    getSelection().addRange(range);
+    status.textContent = 'Press Ctrl+C or Cmd+C to copy the selected prompt.';
+  }
+});
+
+for (const button of document.querySelectorAll('.examples button')) {
+  button.addEventListener('click', () => {
+    idea.textContent = button.textContent;
+    status.textContent = '';
+    idea.focus();
+  });
+}
+
+idea.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') { event.preventDefault(); document.getElementById('copy').click(); }
+});
+idea.addEventListener('input', () => { status.textContent = ''; });
+</script>
+</body>
+</html>

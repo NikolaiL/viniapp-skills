@@ -23,8 +23,14 @@ For a bounded bug fix, reproduce the failure, read the relevant topic, make the
 smallest complete repair, and follow the verification and handoff procedure.
 
 Read linked files relative to this file's location, not the target app's working
-directory. If reading this over HTTP, resolve links against the fetched URL.
+directory. If reading this over HTTP, resolve links against the fetched URL
+(base URL `https://skills.viniapp.xyz/<topic>/SKILL.md`).
 Fetch only the topic you need. Do not assume another skill or tool is installed.
+
+Reading this over HTTP? Topics load by URL, but the starter and scripts must be on
+disk. Before creating an app, download
+`https://skills.viniapp.xyz/download/viniapp-skills.zip`, unzip it outside the app
+directory, and use the extracted `viniapp-skills/` directory as `<skill-dir>` below.
 
 | Topic | Read when |
 | --- | --- |

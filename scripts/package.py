@@ -20,7 +20,9 @@ def main():
     archive = output / "viniapp-skills.zip"
     with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as bundle:
         for file in sorted(root.rglob("*")):
-            if ".git" in file.relative_to(root).parts:
+            parts = file.relative_to(root).parts
+            # The website (site/, dist/, vercel.json) is not part of the pack.
+            if ".git" in parts or parts[0] in (".vercel", "site", "dist", "vercel.json"):
                 continue
             if file.is_symlink():
                 raise SystemExit("Symbolic links cannot be packaged.")
