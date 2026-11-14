@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = join(root, 'dist');
-const notPack = new Set(['.git', '.vercel', 'dist', 'site', 'vercel.json', 'node_modules']);
+const notPack = new Set(['.git', '.vercel', '.vercelignore', 'dist', 'site', 'vercel.json', 'node_modules']);
 
 rmSync(dist, { recursive: true, force: true });
 mkdirSync(dist);

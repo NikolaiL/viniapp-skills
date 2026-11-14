@@ -22,7 +22,7 @@ def main():
         for file in sorted(root.rglob("*")):
             parts = file.relative_to(root).parts
             # The website (site/, dist/, vercel.json) is not part of the pack.
-            if ".git" in parts or parts[0] in (".vercel", "site", "dist", "vercel.json"):
+            if ".git" in parts or parts[0] in (".vercel", ".vercelignore", "site", "dist", "vercel.json"):
                 continue
             if file.is_symlink():
                 raise SystemExit("Symbolic links cannot be packaged.")
