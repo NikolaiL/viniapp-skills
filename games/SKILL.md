@@ -23,7 +23,10 @@ capabilities are actually needed. Do not build a custom 3D engine for a 2D brief
 - Keep authoritative engine state out of per-frame React rerenders; bridge
   HUD updates at a lower rate. Frame callbacks must not read stale closures.
 - Support held input and release/cancel/blur. Do not test a movement game only
-  with isolated taps. Resize from the actual container and scale for DPR.
+  with isolated taps. Resize from the actual container and scale for DPR. A
+  frame that resets the canvas transform resets it to the DPR transform
+  (`setTransform(dpr, 0, 0, dpr, 0, 0)`), never to the identity: that draws
+  the game into a quarter of the screen on every 2× phone.
 - During a run the game owns the screen. The stage is `position: fixed; inset: 0`
   at the full dynamic viewport height. App chrome (header, nav, side panels, footer) is hidden.
   The HUD and controls overlay the stage inside the safe-area insets. While
@@ -62,7 +65,9 @@ must consume it according to the displayed rules. Read
 Run at least no-input, held-one-direction, and delayed-input cases. Compare
 simulation outcomes at different frame rates. In a browser exercise start,
 several seconds of live play, game-over, and restart, including held controls.
-At a phone viewport, during a run, check that
+Run phone browser checks at device scale factor 2 (Playwright
+`deviceScaleFactor: 2` or an iPhone device preset); at 1 a canvas scaling bug
+is invisible. At a phone viewport, during a run, check that
 `document.scrollingElement.scrollHeight <= innerHeight` and that `scrollY`
 stays 0 after taps and drags on the HUD, the controls and the stage.
 Capture in-play frames before game-over and assess motion, readability, input
