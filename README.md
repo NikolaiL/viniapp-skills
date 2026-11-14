@@ -1,8 +1,13 @@
 # ViniApp Skills
 
 Build complete web apps and optional miniapps with your own coding agent.
-An open-source snapshot of ViniApp's development knowledge, with local
-procedures replacing the managed build controller. Version **0.3.0**.
+An open-source snapshot of [ViniApp](https://www.viniapp.xyz)'s development
+knowledge, with local procedures replacing the managed build controller.
+Version **0.3.0**.
+
+Prefer not to run an agent yourself? [ViniApp](https://www.viniapp.xyz) builds,
+deploys and hosts Farcaster and Base mini apps from a prompt. This pack is the
+do-it-yourself version of that knowledge.
 
 The layout follows [ETHSkills](https://ethskills.com/): one entry point at
 `SKILL.md`, an end-to-end `ship/SKILL.md`, and focused `topic/SKILL.md` files.
