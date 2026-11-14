@@ -31,7 +31,9 @@ try {
     assert(header, `Missing frontmatter: ${file}`);
     const name = header[1].match(/^name: ([a-z0-9-]+)$/m)?.[1];
     const description = header[1].match(/^description: (.+)$/m)?.[1];
-    assert.equal(name, path.basename(path.dirname(file)), `Skill name/directory mismatch: ${file}`);
+    // The pack's own directory may be checked out under any name (CI, Vercel).
+    const expectedName = path.dirname(file) === path.resolve(root) ? "viniapp-skills" : path.basename(path.dirname(file));
+    assert.equal(name, expectedName, `Skill name/directory mismatch: ${file}`);
     assert(description && description.length <= 1024, `Invalid description: ${file}`);
     assert(/^["']/.test(description) || !/[:#]\s/.test(description), `Quote description punctuation for valid YAML: ${file}`);
     assert(text.split("\n").length < 500, `Skill entry point is too large: ${file}`);
