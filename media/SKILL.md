@@ -66,6 +66,10 @@ autoplay before a user gesture.
    every background.
 2. **Asset plan.** List each asset with its file, size, opacity (opaque or
    cutout) and where it renders. Keep text, scores and buttons out of images.
+   Every asset the brief names is a deliverable: animation frames, parallax
+   layers, a specific sound. Ship it, or say in the handoff what replaced it
+   and why. A transformed single sprite is not an animation and one flat image
+   is not a parallax background.
 3. **Key art first.** Generate one scene that shows the style and look at it.
    Pass it as `--ref` to actors, pickups and UI pieces so the set matches. Do
    not pass it to backgrounds: the model copies its composition. Backgrounds

@@ -37,6 +37,9 @@ capabilities are actually needed. Do not build a custom 3D engine for a 2D brief
   [canvas in webviews](references/canvas-in-webviews.md#stage-and-safe-areas).
 - Keep pause, restart, game-over, inventory consumption, and score transitions
   explicit. Restart clears timers, held pointers, and pending round effects.
+- Pause when the page is hidden or the window loses focus, and resume only on a
+  deliberate tap. Never end a run on a timer the brief did not ask for; a
+  replay or verification bound sits far above any real run.
 - Store difficulty/ramp data once and share relevant caps with server checks.
   Make threats legible with time to react; do not mistake unavoidable deaths
   for increased difficulty.
@@ -63,7 +66,12 @@ must consume it according to the displayed rules. Read
 ## Playability evidence
 
 Run at least no-input, held-one-direction, and delayed-input cases. Compare
-simulation outcomes at different frame rates. In a browser exercise start,
+simulation outcomes at different frame rates. Tune difficulty by measurement:
+run the engine headless with three simple player models (perfect; decent, with
+aim error and about 100 ms reaction delay; casual, with more of both) over a
+few dozen seeds. Adjust the ramp until the decent model's median run length
+meets the brief's target (or the session length in `GAME_SPEC.md`) and the
+casual model clears the first obstacle, and record the medians in the spec. In a browser exercise start,
 several seconds of live play, game-over, and restart, including held controls.
 Run phone browser checks at device scale factor 2 (Playwright
 `deviceScaleFactor: 2` or an iPhone device preset); at 1 a canvas scaling bug

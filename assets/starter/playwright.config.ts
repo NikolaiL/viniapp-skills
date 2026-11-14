@@ -17,9 +17,12 @@ export default defineConfig({
     baseURL,
     browserName: "chromium",
     trace: "retain-on-failure",
+    // Hosts that provide a browser (managed builders, CI images) set this; then no install is needed.
+    launchOptions: { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined },
   },
   projects: [
-    { name: "mobile", use: { viewport: { width: 375, height: 760 }, isMobile: true, hasTouch: true } },
+    // Phones are 2-3x: at 1x a canvas or image scaling bug is invisible.
+    { name: "mobile", use: { viewport: { width: 375, height: 760 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true } },
     { name: "desktop", use: { viewport: { width: 1280, height: 800 } } },
   ],
   webServer: {
