@@ -31,13 +31,14 @@ verified SDK version and commit the resulting lockfile.
   page, navigation, server health, or anonymous core flow.
 - Bridge host safe-area values into the variables from
   [mobile](../mobile/SKILL.md), keeping SDK reads in one provider.
-- For authenticated server data use verified Quick Auth, with the configured
-  public domain/audience: `createClient().verifyJwt({ token, domain })` from
-  `@farcaster/quick-auth` on the server (it requires TypeScript 5.8.3, the
-  starter's pin). Malformed or forged tokens throw `jose` errors (`ERR_JWS_*`,
-`ERR_JWT_*`), not only `InvalidTokenError`: answer those 401 and let JWKS
-fetch failures surface as 5xx. See [data](../data/SKILL.md). Never use an unverified
-  SDK user object to authorize writes.
+- For authenticated server data use verified Quick Auth. The miniapp starter
+  ships both halves: call your API with `authFetch` from `lib/auth-fetch.ts`
+  (attaches the token inside a Farcaster host, plain fetch on the web) and read
+  the caller in route handlers with `await verifiedFid(request)` from
+  `lib/quick-auth.ts` (null when signed out; throws a 401 `Response` for forged,
+  expired or malformed tokens, including an unknown key id; JWKS outages stay 5xx).
+  Keep them rather than rewriting them. See [data](../data/SKILL.md). Never use an
+  unverified SDK user object or a client-sent fid to authorize writes.
 - Invoke sharing/wallet actions only in a supported host. On web use Web Share
   or a copy-link fallback; treat share cancellation as cancellation.
 
