@@ -59,8 +59,8 @@ try {
     manifests[dir] = manifest;
   }
   // The miniapp overlay must be the starter plus the host SDK, nothing else.
-  const { "@farcaster/miniapp-sdk": sdk, ...miniappDeps } = manifests["assets/miniapp"].dependencies;
-  assert(sdk, "Miniapp overlay must pin @farcaster/miniapp-sdk.");
+  const { "@farcaster/miniapp-sdk": sdk, "@farcaster/quick-auth": quickAuth, ...miniappDeps } = manifests["assets/miniapp"].dependencies;
+  assert(sdk && quickAuth, "Miniapp overlay must pin @farcaster/miniapp-sdk and @farcaster/quick-auth.");
   assert.deepEqual({ ...manifests["assets/miniapp"], dependencies: miniappDeps }, manifests["assets/starter"], "Miniapp package.json drifted from the starter.");
   const fragment = JSON.parse(readFileSync(path.join(root, "assets/onchain/package.fragment.json"), "utf8"));
   for (const version of [fragment.dependencies, fragment.devDependencies, fragment.miniappDependencies].flatMap(Object.values)) {
