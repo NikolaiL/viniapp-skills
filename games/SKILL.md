@@ -29,7 +29,9 @@ capabilities are actually needed. Do not build a custom 3D engine for a 2D brief
   the game into a quarter of the screen on every 2× phone.
 - During a run the game owns the screen. The stage is `position: fixed; inset: 0`
   at the full dynamic viewport height. App chrome (header, nav, side panels, footer) is hidden.
-  The HUD and controls overlay the stage inside the safe-area insets. While
+  The HUD and controls overlay the stage inside the safe-area insets. Fit the playfield
+  into the space the HUD leaves, so the goal, the player and threats are never under it,
+  in a tall phone and in a short landscape window (1280×650) alike. While
   playing, `html` and `body` get `overflow: hidden; overscroll-behavior: none`,
   so no tap or drag anywhere can scroll, bounce or pull the page. Pause,
   game-over and exit restore the normal page. A game card embedded in a
