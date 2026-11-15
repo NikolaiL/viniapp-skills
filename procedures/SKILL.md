@@ -57,6 +57,13 @@ For Ethereum/EVM work, read [ETHSkills](https://ethskills.com/SKILL.md) before
 choosing the onchain implementation and verification path.
 Keep the repo buildable; preserve validation and error handling when moving code.
 
+The starter's lint enforces the React 19 hook rules, and they fail most first drafts.
+Write to them from the start: derive values during render instead of copying props or
+state into state from an effect; read browser-only values (`localStorage`,
+`matchMedia`, the clock) with `useSyncExternalStore` or a lazy `useState` initializer;
+read and write refs only in effects and event handlers, never during render; and call
+impure functions (`Date.now()`, `Math.random()`) in handlers, effects or initializers.
+
 Record the changed files and the observation that proves the slice works. Run
 targeted checks after a coherent slice, not after each keystroke. Give concise
 progress updates that state what now works and what is next.
