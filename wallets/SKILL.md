@@ -20,6 +20,18 @@ ethskills.com sends data out, so skip it unless the owner approves. If ETHSkills
 prerequisite for the affected onchain work and continue independent app work.
 Non-EVM integrations use their own current official documentation.
 
+## Payments the client reports
+
+When the client sends a transaction hash for a payment, the server decides from the
+chain, never from the request: a successful receipt with enough confirmations, a
+`Transfer` from the real token contract to the expected recipient for the expected
+amount, a block time after the thing it pays for was created, and one credit per
+transaction log (a unique key on hash and log index). Credit a payment to a user only
+when its sender is a wallet that user proved (a signature from that address, or an
+address verified on their Farcaster account); a Farcaster sign-in alone does not prove
+any wallet. Otherwise record it under the sending address, so nobody can claim
+another person's transfer.
+
 ## Contracts in this pack's starter
 
 For an app built from this pack, start onchain work with
