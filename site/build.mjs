@@ -17,7 +17,7 @@ mkdirSync(dist);
 for (const name of readdirSync(root)) {
   if (!notPack.has(name)) cpSync(join(root, name), join(dist, name), { recursive: true });
 }
-for (const name of ['index.html', 'favicon.png']) cpSync(join(root, 'site', name), join(dist, name));
+for (const name of ['index.html', 'favicon.png', 'og-skills.png']) cpSync(join(root, 'site', name), join(dist, name));
 
 // package.py refuses an output inside the pack, so build the archives elsewhere first.
 const releases = mkdtempSync(join(tmpdir(), 'viniapp-skills-'));
